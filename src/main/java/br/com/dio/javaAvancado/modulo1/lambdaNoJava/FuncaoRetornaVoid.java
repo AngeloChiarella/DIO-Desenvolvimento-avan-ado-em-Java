@@ -1,4 +1,4 @@
-package br.com.dio.javaAvancado.lambdaNoJava;
+package br.com.dio.javaAvancado.modulo1.lambdaNoJava;
 
 public class FuncaoRetornaVoid {
 

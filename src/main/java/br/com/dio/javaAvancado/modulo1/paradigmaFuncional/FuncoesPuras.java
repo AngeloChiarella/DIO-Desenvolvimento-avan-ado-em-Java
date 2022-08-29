@@ -1,4 +1,4 @@
-package br.com.dio.javaAvancado.paradigmaFuncional;
+package br.com.dio.javaAvancado.modulo1.paradigmaFuncional;
 
 import java.util.function.BiPredicate;
 

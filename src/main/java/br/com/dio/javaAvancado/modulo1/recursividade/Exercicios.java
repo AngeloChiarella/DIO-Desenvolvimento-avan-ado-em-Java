@@ -1,4 +1,4 @@
-package br.com.dio.javaAvancado.recursividade;
+package br.com.dio.javaAvancado.modulo1.recursividade;
 
 //	CHAMAR VARIAS VEZES O MESMO METODO
 public class Exercicios {

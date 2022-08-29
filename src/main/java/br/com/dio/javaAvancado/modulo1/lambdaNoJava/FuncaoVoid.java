@@ -1,4 +1,4 @@
-package br.com.dio.javaAvancado.lambdaNoJava;
+package br.com.dio.javaAvancado.modulo1.lambdaNoJava;
 
 //FunctionalInterface: Protege a interface pra que nao seja de outro tipo a nao ser "Funcional"
 @FunctionalInterface

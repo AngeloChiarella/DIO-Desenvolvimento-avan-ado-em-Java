@@ -1,4 +1,4 @@
-package br.com.dio.javaAvancado.recursividade.fatorialRecursivo;
+package br.com.dio.javaAvancado.modulo1.recursividade.fatorialRecursivo;
 
 public class FatorialTailCall {
 

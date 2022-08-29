@@ -1,4 +1,4 @@
-package br.com.dio.javaAvancado.recursividade.fatorialMemorization;
+package br.com.dio.javaAvancado.modulo1.recursividade.fatorialMemorization;
 
 import java.util.HashMap;
 import java.util.Map;
