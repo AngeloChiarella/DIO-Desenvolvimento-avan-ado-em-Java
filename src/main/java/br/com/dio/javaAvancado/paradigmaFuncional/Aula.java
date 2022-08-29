@@ -1,20 +1,22 @@
 package br.com.dio.javaAvancado.paradigmaFuncional;
 
-import java.util.function.UnaryOperator;
+import java.util.function.Function;
 
 public class Aula {
+//	EXEMPLO AULA: Funções e imutabilidade em Paradigma Funcional
 	public static void main(String[] args) {
 		
-// segundo exemplo - paradigma funcional
-//		(declara o comportamento antes de precisar usar)
-		UnaryOperator<Integer> calcularValoresVezes3 = valor2 -> valor2 * 3;
-		int valor2 = 10;
-		System.out.println("O resultado é: " + calcularValoresVezes3.apply(10));
+//		funcional
+		Function<Integer, Object> buscarUsuario2 = idUsuario2 -> new Object();
 
-// primeiro exemplo - - paradigma imperativo
-		int valor = 10;
-		int resultado = valor * 3;
-		System.out.println("O resultado é: " + resultado);
+//		imperativo
+		System.out.println(buscarUsuario(15));
 
 	}
+
+	public static Object buscarUsuario(int idUsuario) {
+//		retornar o usuario
+		return new Object();
+	}
+
 }
