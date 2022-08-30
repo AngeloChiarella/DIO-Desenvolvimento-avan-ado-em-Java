@@ -1,5 +1,8 @@
 package br.com.dio.javaAvancado.modulo2;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -9,8 +12,16 @@ public class Iteracoes {
 		String[] nomes = { "Angelo", "Chiarella", "Fernandes", "Estudante", "Java" };
 		Integer[] numeros = { 1, 2, 3, 4, 5 };
 //		imprimirNomesFiltrados(nomes);
-		imprimirTodosOsNomes(nomes);
-		imprimirODobroDeCadaItemNaLista(numeros);
+//		imprimirTodosOsNomes(nomes);
+//		imprimirODobroDeCadaItemNaLista(numeros);
+
+		List<String> profissoes = new ArrayList<>();
+		profissoes.addAll(Arrays.asList("Desenvolvedor", "Testador", "Gerente de projeto", "Gerente de qualidade"));
+
+		profissoes.stream()//
+				.filter(profissao -> profissao.startsWith("Gerente"))//
+				.forEach(System.out::println);//
+		;
 	}
 
 	public static void imprimirTodosOsNomes(String[] nomes) {
@@ -24,9 +35,11 @@ public class Iteracoes {
 	}
 
 	public static void imprimirODobroDeCadaItemNaLista(Integer... numeros) {
-		for (Integer numero : numeros) {
-			System.out.println(numero * 2);
-		}
+//		for (Integer numero : numeros) {
+//			System.out.println(numero * 2);
+//		}
+//		Stream.of(numeros).forEach(numero -> System.out.println(numero * 2));
+		Stream.of(numeros).map(numero -> numero * 2).forEach(System.out::println);
 	}
 
 	public static void imprimirNomesFiltrados(String... nomes) {
