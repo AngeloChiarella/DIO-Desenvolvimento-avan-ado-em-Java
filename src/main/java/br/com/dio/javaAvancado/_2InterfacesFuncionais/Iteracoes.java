@@ -11,9 +11,9 @@ public class Iteracoes {
 	public static void main(String[] args) {
 		String[] nomes = { "Angelo", "Chiarella", "Fernandes", "Estudante", "Java" };
 		Integer[] numeros = { 1, 2, 3, 4, 5 };
-//		imprimirNomesFiltrados(nomes);
-//		imprimirTodosOsNomes(nomes);
-//		imprimirODobroDeCadaItemNaLista(numeros);
+		imprimirNomesFiltrados(nomes);
+		imprimirTodosOsNomes(nomes);
+		imprimirODobroDeCadaItemNaLista(numeros);
 
 		List<String> profissoes = new ArrayList<>();
 		profissoes.addAll(Arrays.asList("Desenvolvedor", "Testador", "Gerente de projeto", "Gerente de qualidade"));
