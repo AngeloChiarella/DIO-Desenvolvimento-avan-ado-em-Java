@@ -6,7 +6,6 @@ import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
-import java.net.http.HttpResponse.BodyHandlers;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
@@ -32,16 +31,16 @@ public class ClientHttpExemplo {
 	});
 
 	public static void main(String[] args) throws IOException, InterruptedException {
-//		connectAndPrintUrlJavaOracle();
+		connectAndPrintUrlJavaOracle();
 		connectAkamaiHttpClient();
 
 	}
 
-	private static void connectAkamaiHttpClient() {
-		System.out.println("Running HTTP/1.1 exemple...");
+	private static void connectAkamaiHttpClient() throws IOException, InterruptedException {
+		System.out.println("Running HTTP/2 exemple...");
 		try {
 			HttpClient httpClient = HttpClient.newBuilder()//
-					.version(HttpClient.Version.HTTP_1_1)//
+					.version(HttpClient.Version.HTTP_2)//
 					.proxy(ProxySelector.getDefault())//
 					.build();
 
@@ -73,7 +72,7 @@ public class ClientHttpExemplo {
 								System.out.println("Imagem Carregada :: " + image + " Status Code ::"
 										+ imageResponse.statusCode());
 							} catch (IOException | InterruptedException e) {
-								e.printStackTrace();
+								System.out.println("Erro ao recuperar imagem: " + image);
 							}
 						});
 
@@ -85,18 +84,12 @@ public class ClientHttpExemplo {
 				try {
 					f.get();
 				} catch (InterruptedException | ExecutionException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
+					System.out.println("Erro ao esperar carregar imagem do futuro.");
 				}
 			});
 
 			long end = System.currentTimeMillis();
 			System.out.println("Tempo de carregamento total: " + (end - start));
-
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
-			e.printStackTrace();
 		} finally {
 			executor.shutdown();
 		}
